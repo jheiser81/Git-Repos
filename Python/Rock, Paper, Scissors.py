@@ -7,5 +7,5 @@ def get_choices (): #def is how you define a function in python
 
     #call the get_choices function, and store the response in a variable called choices
 
-    choices = get_choices
-    print (choices)
+choices = get_choices()
+print (choices)
