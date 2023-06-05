@@ -105,6 +105,26 @@
 
 #endregion
 
+#region ---STRINGS---
+
+# -Strings are used to store text data. They can be declared using either single or double quotes, but the quotes must match.
+
+# -Strings can be indexed, meaning that each character in the string has a corresponding index number. The first character has an index of 0, the second character has an index of 1, and so on. You can access a specific character in a string by using the index number in square brackets. For example, name = "John" print(name[0]) will print "J" to the console.
+
+# -You can also use negative indexing to access characters from the end of the string. The last character has an index of -1, the second to last character has an index of -2, and so on. For example, name = "John" print(name[-1]) will print "n" to the console.
+
+# -You can also use a range of indexes to access a range of characters in a string. For example, name = "John" print(name[1:3]) will print "oh" to the console. Note that the range will start at the first index and end at the last index minus one.
+
+# -You can also use the len() function to get the length of a string. For example, name = "John" print(len(name)) will print 4 to the console. This is the equivalent of the .length property in other languages.
+
+# -You can concatenate two strings by using the + operator. For example, name = "John" print("Hello " + name) will print "Hello John" to the console. Note that you cannot concatenate a string and a number. You must first convert the number to a string by using the str() function. For example, name = "John" age = 25 print("Hello " + name + ". You are " + str(age) + " years old.") will print "Hello John. You are 25 years old." to the console.
+
+# -You can also concatenate strings with variables that have been given a value. For example, name = "John" age = 25 print(f"Hello {name}. You are {age} years old.") will print "Hello John. You are 25 years old." to the console. Note that the f before the string indicates that it is a formatted string. This allows you to insert variables into the string by using curly brackets.
+# name = "John"
+# age = 25
+# print(f"Hello {name}. You are {age} years old.")
+#endregion
+
 #region ---EXPRESSIONS AND STATEMENTS---
 
 # -An expression is any type of code that return a value. For example, 5 + 5 is an expression that returns the value 10.
