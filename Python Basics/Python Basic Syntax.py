@@ -53,6 +53,16 @@
 # -'in' returns true if a sequence with the specified value is present in the object. For example, 5 in [1, 2, 3, 4, 5] will return true.
 # -'not in' returns true if a sequence with the specified value is not present in the object. For example, 6 not in [1, 2, 3, 4, 5] will return true.
 
+# Ternary Operator:
+# -The ternary operator is a shortcut for an if statement. It is written as follows:
+# variable = value1 if condition else value2
+# -If the condition is true, the variable will be assigned value1. If the condition is false, the variable will be assigned value2.
+# -For example:
+# x = 5
+# y = 10
+# z = x if x > y else y
+# print(z) -This will print 10 to the console
+
 #endregion
 
 #region ---VARIABLES---
@@ -93,6 +103,14 @@
 
 # -Variables can also be passed to the int(), float(), and str() functions to convert them to a different data type. For example, you can convert an integer to a string by passing it to the str() function. This is known as type casting.
 
+# region ---STRINGS---
+
+# -Strings are used to store text data. They can be declared using either single or double quotes, as long as the quotes match.
+
+# -Strings can be concatenated using the + operator. For example, "Hello" + "World" will return "Hello World". You can also concatenate strings with variables by using the + operator. For example, "Hello" + name will return "Hello John" if the name variable is set to "John". You can also use f strings to concatenate strings with variables. For example, f"Hello {name}" will return "Hello John" if the name variable is set to "John". f strings are generally considered to be the best way to concatenate strings with variables. 
+
+# -You can use the * operator to repeat a string a specified number of times. For example, "Hello" * 3 will return "HelloHelloHello".
+
 #endregion
 
 #region ---EXPRESSIONS AND STATEMENTS---
@@ -106,3 +124,4 @@
 # -Commonly, each statement is written on a separate line. However, multiple statements can be written on the same line by separating them with a semicolon (;). However, it is generally considered bad practice to do this as it makes the code harder to read.
 
 #endregion
+
