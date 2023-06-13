@@ -10,6 +10,20 @@
 
 #endregion
 
+#region ---INPUT AND OUTPUT---
+
+# -Python has a built-in function called input() that will prompt the user to enter a value. The input() function can take a string as an argument that will be displayed to the user when the prompt appears. The input() function will return a string value, so if you want to use the input as a number, you will need to convert it to an integer or float. For example, x = int(input("Enter a number: ")) will prompt the user to enter a number and store it in the variable x as an integer. name = input("Enter your name: ") will prompt the user to enter their name and store it in the variable name as a string.
+
+# -Python has a built-in function called print() that will output a value to the console. The print() function can take multiple arguments, separated by commas, and will print them to the console with a space between each value. The print() function will automatically add a new line at the end of the output. If you do not want a new line to be added, you can add an end argument to the print() function and set it to an empty string (""). For example, print("Hello", end="") will print "Hello" to the console without adding a new line.
+
+#-\n can be used to add a new line to a string. For example, print("Hello\nWorld") will print "Hello" and "World" on separate lines.
+
+#-The format() method can be used to insert values into a string. The format() method takes unlimited arguments, separated by commas, and inserts them into the string in the order they are given. The format() method can also take arguments with a number in curly braces ({}) to specify the order in which they are inserted. For example, print("Hello {}, my name is {}".format("World", "John")) will print "Hello World, my name is John" to the console.
+
+#-The format() method can also take arguments with a colon (:) followed by a format specifier. For example, print("The number is {:.2f}".format(1.2345)) will print "The number is 1.23" to the console. The format specifier can be used to specify the number of decimal places, the number of digits, the type of number (integer, float, etc.), and more. In this case, the f denotes a float and the .2 denotes 2 decimal places.
+
+#endregion
+
 #region ---OPERATORS---
 
 # -Arithmetic Operators:
