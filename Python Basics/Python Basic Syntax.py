@@ -87,6 +87,11 @@
 
 #-Variables do not need to be declared with any particular type and can even change type after they have been set. 
 
+#-To declare a variable, simply assign a value to it. For example:
+# x = 5
+# y = "Hello"
+# z = 5.5
+
 #-Variable names can contain letters, numbers, and underscores but cannot start with a number. Additionally, there are certain python keywords that cannot be used as variable names, such as "if", "for", "while", "sum", "print", etc. These keywords are reserved as they are used to define the syntax and structure of the language. There is no need to memorize the reserved keywords, as your IDE will highlight them for you if you try to use them as a variable name.
 
 #endregion
@@ -151,4 +156,22 @@
 
 #endregion
 
+#region ---CONDITIONALS---
 
+# -Condition statements, also known as if statements, are used to perform different actions based on a condition being either true or false. If true, do this. If false, do something else.
+
+# -Note that the if statement condition must be followed by a colon (:). Python uses indentation to indicate which lines of code are part of the if statement. All indented lines of code will be executed if the condition is true. If the condition is false, the indented lines of code will be skipped. The code that will run if the condition is false does not have to be indented. 
+
+# -In addition to the 'if' keyword, there are two other keywords that can be used in an if statement: 'elif' and 'else'. 'elif' is short for 'else if' and is used to check for additional conditions. 'else' is used to run code if none of the previous conditions are true. Note that 'else' does not have a condition. It is used to run code if none of the previous conditions are true.
+
+beverage = input("What beverage would you like? ")
+if beverage == "coffee":
+    print("We have coffee")
+elif beverage == "tea":
+    print("We have tea")
+elif beverage == "soda":
+    print("We have soda")
+else:
+    print("We dont have that. You get water.")
+
+#endregion
