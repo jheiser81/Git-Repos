@@ -138,10 +138,19 @@
 
 # -You can concatenate two strings by using the + operator. For example, name = "John" print("Hello " + name) will print "Hello John" to the console. Note that you cannot concatenate a string and a number. You must first convert the number to a string by using the str() function. For example, name = "John" age = 25 print("Hello " + name + ". You are " + str(age) + " years old.") will print "Hello John. You are 25 years old." to the console.
 
-# -You can also concatenate strings with variables that have been given a value. For example, name = "John" age = 25 print(f"Hello {name}. You are {age} years old.") will print "Hello John. You are 25 years old." to the console. Note that the f before the string indicates that it is a formatted string. This allows you to insert variables into the string by using curly brackets.
+# -You can also concatenate strings with variables that have been given a value. For example, name = "John" age = 25 print(f"Hello {name}. You are {age} years old.") will print "Hello John. You are 25 years old." to the console. Note that the f before the string indicates that it is a formatted string. This allows you to insert variables into the string by using curly braces.
 # name = "John"
 # age = 25
 # print(f"Hello {name}. You are {age} years old.")
+
+#Strings can be printed on multiple lines by using 3 sets of ""
+#For example: 
+print("""Joel is
+
+42
+
+years old
+""")
 #endregion
 
 #region ---EXPRESSIONS AND STATEMENTS---
