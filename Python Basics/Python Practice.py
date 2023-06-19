@@ -25,15 +25,13 @@ print(f"{author} once said: {quote}\n")
 
 # Create a simple program that uses each of the math operators (+, -, *, /, %, **, //) with numbers between 1 and 10. Print the results of each operation.
 
-x = 5
-y = 5
-print(x + y)
-print(x - y)
-print(x * y)
-print(x / y)
-print(x % y)
+num1 = 5 + 15 * 3
+num2 = 100 / 5 - 5
+num3 = num1 - num2
+print(num3)
+num3 = 15 % 4
+print(num3)
 
-print(x + y * 3 -(100 / 5 - 5))
 print("\n")
 
 # --Conditional Statements--
@@ -41,6 +39,7 @@ print("\n")
 # Explore conditional statements such as if, else if, else, and ternary operators. 
 
 # if, else if, else
+
 x = input("Enter a number for x:")
 y = input("Enter a number for y:")
 if x > y:
@@ -54,7 +53,7 @@ print("\n")
 
 # ternary operator, also known as a conditional expression
 
-age = input("Enter your age:")
+age = int(input("Enter your age:")) #have to convert input to int, otherwise it will be a string
 print("You are old enough to vote." if age >= 18 else "You are not old enough to vote.")
 
 
