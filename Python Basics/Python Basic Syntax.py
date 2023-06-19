@@ -220,5 +220,9 @@ elif beverage == "soda":
     print("We have soda")
 else:
     print("We dont have that. You get water.")
+    
+# -In addition to regular if statements, there are also what are called conditional expressions. These are also known as ternary operators. They are used to assign a value to a variable based on a condition. The syntax for creating a conditional expression is: variable = value1 if condition else value2. If the condition is true, the variable will be assigned value1. If the condition is false, the variable will be assigned value2. For example, age = 25 if age >= 21 else 0 will assign 25 to the age variable if age is greater than or equal to 21. Otherwise, it will assign 0 to the age variable.
+
+
 
 #endregion
