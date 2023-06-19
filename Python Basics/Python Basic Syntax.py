@@ -188,7 +188,7 @@ years old
 # -It is important to note that these methods do not modify the original string. Instead, they return a new string with the specified changes. For example, name = "John" print(name.upper()) will print "JOHN" to the console, but the value of name will still be "John".
 
 # -There are many more string methods, and it is recommended that you look them up as you need them, rather than trying to memorize them all. A full list of string methods can be found at https://www.w3schools.com/python/python_ref_string.asp
- 
+
 #endregion
 
 #region ---EXPRESSIONS AND STATEMENTS---
