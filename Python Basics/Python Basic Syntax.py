@@ -126,6 +126,7 @@
 
 #region ---STRINGS---
 
+
 # -Strings are used to store text data. They can be declared using either single or double quotes, but the quotes must match.
 
 # -Strings can be indexed, meaning that each character in the string has a corresponding index number. The first character has an index of 0, the second character has an index of 1, and so on. You can access a specific character in a string by using the index number in square brackets. For example, name = "John" print(name[0]) will print "J" to the console.
@@ -151,6 +152,43 @@ print("""Joel is
 
 years old
 """)
+#endregion
+
+#region ---STRING METHODS---
+
+# -Python has a set of built-in methods that can be used on strings. These methods are functions that can be called on a string to perform an operation on it. For example, name = "John" print(name.upper()) will print "JOHN" to the console. Note that the parentheses are required even if the method does not take any parameters.
+
+# -The follows table lists some of the most commonly used string methods:
+
+#  Method	             Description
+# .capitalize()	     Converts the first character to upper case
+# .toUpper()            Converts a string to upper case
+# .toLower()            Converts a string to lower case
+# .title()              Converts the first character of each word(string) to upper case 
+# .strip()              Removes any whitespace from the beginning or the end of a string
+# .replace()            Replaces a string with another string   
+# .split()              Splits a string into a list
+# .join()               Appends new string to the end of an existing string
+# .format()             Formats specified values in a string
+# .count()              Returns the number of times a specified value occurs in a string   
+# .index()              Searches the string for a specified value and returns the position
+# .find()               Returns the position of the first occurrence of a specified value
+# .isalpha()            Returns True if a string contains only alphabetic characters
+# .isalnum()            Returns True if a string contains only alphanumeric characters
+# .isdecimal()          Returns True if a string contains only decimal characters
+# .isdigit()            Returns True if a string contains only digits
+# .islower()            Returns True if a string contains only lower case characters
+# .isupper()            Returns True if a string contains only upper case characters
+# .startswith()         Returns True if a string starts with a specified value
+# .endswith()           Returns True if a string ends with a specified value
+# len()                 Returns the length of a string
+
+# -You can also us the in keyword to check if a string contains a specified value. For example, name = "John" print("J" in name) will print True to the console.
+
+# -It is important to note that these methods do not modify the original string. Instead, they return a new string with the specified changes. For example, name = "John" print(name.upper()) will print "JOHN" to the console, but the value of name will still be "John".
+
+# -There are many more string methods, and it is recommended that you look them up as you need them, rather than trying to memorize them all. A full list of string methods can be found at https://www.w3schools.com/python/python_ref_string.asp
+ 
 #endregion
 
 #region ---EXPRESSIONS AND STATEMENTS---
