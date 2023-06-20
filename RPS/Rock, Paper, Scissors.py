@@ -2,9 +2,9 @@ import random
 
 def get_choices (): #def is how you define a function in python
     player_choice = input("Enter a choice(rock, paper, or scissors: ")
-    options = ["rock", "paper", "scissors"]
-    computer_choice = random.choice(options)
-    choices = {"player": player_choice, "computer": computer_choice}
+    options = ["rock", "paper", "scissors"] # this is a list (aka array) of options, which is a collection of items stored in a variable
+    computer_choice = random.choice(options) # this is calling the random.choice function, and passing in the options list as a parameter
+    choices = {"player": player_choice, "computer": computer_choice} # this is a dictionary, which is a collection of key value pairs stored in a variable
     return choices
     #code that is indented indicates it is part of the function
     #call the get_choices function, and store the response in a variable called choices
