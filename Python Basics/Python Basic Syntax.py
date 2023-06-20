@@ -1,4 +1,4 @@
-#region ---BASIC PYTHON SYNTAX---
+#region ​‌‍---𝗕𝗔𝗦𝗜𝗖 𝗣𝗬𝗧𝗛𝗢𝗡 𝗦𝗬𝗡𝗧𝗔𝗫---​
 
 # -Python has a very simple syntax that is easy to read and understand. It is not necessary to do certain things common in other programming languages, such as ending lines with a semicolon or using curly braces to open and close blocks of code.
     
@@ -10,13 +10,13 @@
 
 #endregion
 
-#region ---INPUT AND OUTPUT---
+#region ---𝗜𝗡𝗣𝗨𝗧 𝗔𝗡𝗗 𝗢𝗨𝗧𝗣𝗨𝗧---
 
-# -Python has a built-in function called input() that will prompt the user to enter a value. The input() function can take a string as an argument that will be displayed to the user when the prompt appears. The input() function will return a string value, so if you want to use the input as a number, you will need to convert it to an integer or float. For example, x = int(input("Enter a number: ")) will prompt the user to enter a number and store it in the variable x as an integer. name = input("Enter your name: ") will prompt the user to enter their name and store it in the variable name as a string.
+# -Python has a built-in function called ⁡⁢⁣⁣input()⁡ that will prompt the user to enter a value. The input() function can take a string as an argument that will be displayed to the user when the prompt appears. The input() function will return a string value, so if you want to use the input as a number, you will need to convert it to an integer or float. For example, ⁡⁢⁣⁣x = int(input("Enter a number: "))⁡ will prompt the user to enter a number and store it in the variable x as an integer. ⁡⁢⁣⁣name = input("Enter your name: ")⁡ will prompt the user to enter their name and store it in the variable name as a string.
 
-# -Python has a built-in function called print() that will output a value to the console. The print() function can take multiple arguments, separated by commas, and will print them to the console with a space between each value. The print() function will automatically add a new line at the end of the output. If you do not want a new line to be added, you can add an end argument to the print() function and set it to an empty string (""). For example, print("Hello", end="") will print "Hello" to the console without adding a new line.
+# -Python has a built-in function called ⁡⁢⁣⁣print()⁡ that will output a value to the console. The print() function can take multiple arguments, separated by commas, and will print them to the console with a space between each value. The print() function will automatically add a new line at the end of the output. If you do not want a new line to be added, you can add an end argument to the print() function and set it to an empty string (""). For example, ⁡⁢⁣⁣print("Hello", end="")⁡ will print "Hello" to the console without adding a new line.
 
-#-\n can be used to add a new line to a string. For example, print("Hello\nWorld") will print "Hello" and "World" on separate lines.
+#-⁡⁢⁣⁣\n⁡ can be used to add a new line to a string. For example, ⁡⁢⁣⁣print("Hello\nWorld")⁡ will print "Hello" and "World" on separate lines.
 
 #-The format() method can be used to insert values into a string. The format() method takes unlimited arguments, separated by commas, and inserts them into the string in the order they are given. The format() method can also take arguments with a number in curly braces ({}) to specify the order in which they are inserted. For example, print("Hello {}, my name is {}".format("World", "John")) will print "Hello World, my name is John" to the console.
 
@@ -24,7 +24,7 @@
 
 #endregion
 
-#region ---OPERATORS---
+#region ---𝗢𝗣𝗘𝗥𝗔𝗧𝗢𝗥𝗦---
 
 # -Arithmetic Operators:
 
@@ -79,7 +79,7 @@
 
 #endregion
 
-#region ---VARIABLES---
+#region ---𝗩𝗔𝗥𝗜𝗔𝗕𝗟𝗘𝗦---
 
 # -Variables in python function the same as in other languages. They are essentially containers for storing data values. They consist of a name, a value, and the assignment operator (=).
 
@@ -96,7 +96,7 @@
 
 #endregion
 
-#region ---DATA TYPES---
+#region ---𝗗𝗔𝗧𝗔 𝗧𝗬𝗣𝗘𝗦---
 
 # -Python supports the following data types: 
 # -Text Type: str (string) can be declared using either single or double quotes 
@@ -124,8 +124,7 @@
 
 #endregion
 
-#region ---STRINGS---
-
+#region ---𝗦𝗧𝗥𝗜𝗡𝗚𝗦---
 
 # -Strings are used to store text data. They can be declared using either single or double quotes, but the quotes must match.
 
@@ -154,7 +153,7 @@ years old
 """)
 #endregion
 
-#region ---STRING METHODS---
+#region ---𝗦𝗧𝗥𝗜𝗡𝗚 𝗠𝗘𝗧𝗛𝗢𝗗𝗦---
 
 # -Python has a set of built-in methods that can be used on strings. These methods are functions that can be called on a string to perform an operation on it. For example, name = "John" print(name.upper()) will print "JOHN" to the console. Note that the parentheses are required even if the method does not take any parameters.
 
@@ -191,7 +190,7 @@ years old
 
 #endregion
 
-#region ---EXPRESSIONS AND STATEMENTS---
+#region ---𝗘𝗫𝗣𝗥𝗘𝗦𝗦𝗜𝗢𝗡𝗦 𝗔𝗡𝗗 𝗦𝗧𝗔𝗧𝗘𝗠𝗘𝗡𝗧𝗦---
 
 # -An expression is any type of code that return a value. For example, 5 + 5 is an expression that returns the value 10.
 
@@ -203,7 +202,7 @@ years old
 
 #endregion
 
-#region ---CONDITIONALS---
+#region ---𝗖𝗢𝗡𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟𝗦---
 
 # -Condition statements, also known as if statements, are used to perform different actions based on a condition being either true or false. If true, do this. If false, do something else.
 
@@ -223,6 +222,22 @@ else:
     
 # -In addition to regular if statements, there are also what are called conditional expressions. These are also known as ternary operators. They are used to assign a value to a variable based on a condition. The syntax for creating a conditional expression is: variable = value1 if condition else value2. If the condition is true, the variable will be assigned value1. If the condition is false, the variable will be assigned value2. For example, age = 25 if age >= 21 else 0 will assign 25 to the age variable if age is greater than or equal to 21. Otherwise, it will assign 0 to the age variable.
 
+#endregion
 
+#region ---𝗟𝗢𝗢𝗣𝗦---
+
+# -Loops are used to repeat a block of code a specified number of times. There are two types of loops in Python: for loops and while loops.
+
+    # -For Loops:⁡ Like in other languages, a for loop is primarily used to iterate over a sequence of values, like keeping track of a counter variable. When making a for loop in python, you must use the ⁡⁢⁣⁣range()⁡⁡ function. The range() function takes up to 3 parameters: start, stop, and step. The start parameter is the number that the loop will start at. The stop parameter is the number that the loop will stop at. The step parameter is the number that the loop will increment by. If the step parameter is not specified, it will default to 1. For example, ⁡⁢⁣⁣for i in range(1, 10, 2): print(i)⁡ ⁡⁡⁡will print the numbers 1, 3, 5, 7, and 9 to the console. It is not necessary to specify all 3 parameters. ⁡⁢⁣⁣for i in range(10): print(i)⁡⁡ will print the numbers 0 through 9 to the console. Keep in mind that range is exclusive of the stop parameter. This means that the loop will stop before reaching the stop parameter. If you wanted to print the numbers from 1 to 10, for example, you would have to make the range go to 11.
+    
+    # -While Loops: While loops are used to repeat a block of code while a condition is true, and will continue to run until the condition is no longer true. To declare a while loop in python, you use the following syntax: while condition: code. The code will continue to run as long as the condition is true. For example, ⁡⁢⁣⁣while i < 10: print(i) ⁡⁡will print the numbers 0 through 9 to the console. Keep in mind that if the condition is never false, the loop will run forever. This is called an infinite loop. For example, ⁡⁢⁣⁣while True: print("Hello World")⁡ ⁡⁡⁡will print "Hello World" to the console forever. To stop an infinite loop, you can press Ctrl + C on your keyboard.
+
+#endregion
+
+#region ---𝗙𝗨𝗡𝗖𝗧𝗜𝗢𝗡𝗦---
+
+# -Functions are a way to make code modular and reusable. They are blocks of code that perform a specific task whenever they are 'called'. Functions can take parameters, which are values that are passed into the function. Functions can either return a value or not return a value. If a function does not return a value, it is called a procedure. To create a function in Python, you use the following syntax: ⁡⁢⁣⁣def function_name(parameters):code⁡. 
+
+# The ⁡⁢⁣⁣def⁡ keyword is used to declare a function. The function name is the name of the function. The parameters are the values that are passed into the function. The code is the code that will run when the function is called. For example, ⁡⁢⁣⁣def add(x, y): return x + y⁡ will create a function called add that takes two parameters, x and y, and returns the sum of x and y. To call a function, you simply type the name of the function followed by parentheses. For example, add(5, 10) will call the add function and pass in the values 5 and 10 as the parameters. The function will then return the value 15.
 
 #endregion
