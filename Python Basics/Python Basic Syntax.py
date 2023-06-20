@@ -124,6 +124,14 @@
 
 #endregion
 
+#region ​‌‍‌---𝗡𝗨𝗠𝗕𝗘𝗥𝗦---
+
+# -Python supports two types of numbers: integers and floating point numbers. Integers are whole numbers, such as 5, 10, 15, etc. Floating point numbers are numbers with a decimal point, such as 5.5, 10.5, 15.5, etc.
+
+# -Since Python is 100% object oriented, there is no reason to declare a variable before assigning a value to it. Python automatically detects the data type of the variable based on the value assigned to it. For example, if you assign the value 5 to a variable, Python will automatically assign the integer data type to that variable. If you assign the value 5.5 to a variable, Python will automatically assign the float data type to that variable. The only exception to this rule is if you are converting a variable to a different data type using the int(), float(), or str() functions. For example, myInt = 7 will be an integer, but myInt = 7.5 will be a float.
+
+#endregion
+
 #region ---𝗦𝗧𝗥𝗜𝗡𝗚𝗦---
 
 # -Strings are used to store text data. They can be declared using either single or double quotes, but the quotes must match.
@@ -160,7 +168,7 @@ years old
 # -The follows table lists some of the most commonly used string methods:
 
 #  Method	             Description
-# .capitalize()	     Converts the first character to upper case
+# .capitalize()	        Converts the first character to upper case
 # .toUpper()            Converts a string to upper case
 # .toLower()            Converts a string to lower case
 # .title()              Converts the first character of each word(string) to upper case 
