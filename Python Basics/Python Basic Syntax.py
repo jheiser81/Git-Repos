@@ -249,3 +249,4 @@ else:
 # The ⁡⁢⁣⁣def⁡ keyword is used to declare a function. The function name is the name of the function. The parameters are the values that are passed into the function. The code is the code that will run when the function is called. For example, ⁡⁢⁣⁣def add(x, y): return x + y⁡ will create a function called add that takes two parameters, x and y, and returns the sum of x and y. To call a function, you simply type the name of the function followed by parentheses. For example, add(5, 10) will call the add function and pass in the values 5 and 10 as the parameters. The function will then return the value 15.
 
 #endregion
+
