@@ -15,4 +15,4 @@ print("String Concatenation is done with the \"+\" sign.")
 print('e.g. print("Hello " + "world")')
 # Unnecessary indent, in python this will cause an error
 print("New lines can be created with a backslash and n.")
-# Extra bracket
+# Extra bracket causing error
