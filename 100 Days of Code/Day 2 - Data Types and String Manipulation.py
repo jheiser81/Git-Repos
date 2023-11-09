@@ -1,7 +1,7 @@
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                                    # Strings                                   ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Strings
+# ==============================================================================
 
 # Strings are just a sequence of characters. In python, they can be enclosed in single or double quotes. 
 
@@ -12,44 +12,49 @@ print("Hello"[0])
 street_name = "Abbey Road"
 print(street_name[4] + street_name[7])
 
+
 print("123" + "456")
 # Note that the "numbers" inside the quotes are not treated as actual numbers, but as characters in a string. This is because the computer reads anything inside quotes as a string, and so the result will simply concatenate the two strings together.
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                                   # Integers                                   ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Integers
+# ==============================================================================
 
 # Integers are just whole numbers. They can be positive or negative. 
-# To get the computer to read the above example as numbers, you can simply remove the quotes. In python, numbers not enclosed in quotes are automatically treated as integers. In other languages, this may not be the case, and you may have to specify that the number is an integer first.
+# To get the computer to read the above example as numbers, you can simply remove the quotes. 
+# In python, numbers not enclosed in quotes are automatically treated as integers. 
+# In other languages, this may not be the case, and you may have to specify that the number is an integer first.
 
 print(123 + 456)
 
-# In normal usage, large integers are written with commas to separate them. In python, you can use underscores to accomplish the same separation. When the computer reads the number, it will ignore the underscores and treat the number as a single integer. The underscores are simply there to make the number easier to read for humans.
+# In normal usage, large integers are written with commas to separate them. 
+# In python, you can use underscores to accomplish the same separation. 
+# When the computer reads the number, it will ignore the underscores and treat the number as a single integer. 
+# The underscores are simply there to make the number easier to read for humans.
 
 print(123_456_789)
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                      # Floats(Floating Point Numbers)                          ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Floats(Floating Point Numbers)
+# ==============================================================================
 
 # Floating point numbers are simply numbers with a decimal point. They can be positive or negative.
 
 print(3.14159)
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                                 # Booleans                                     ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Booleans
+# ==============================================================================
 
-# Booleans are simply True or False values. They are used for checking conditions in code, and activating or ignoring certain parts of the code depending on the result of the check.
+# Booleans are simply True or False values. 
+# They are used for checking conditions in code, and activating or ignoring certain parts of the code depending on the result of the check.
 
 bool = True
 bool = False
 
-# ****Type Error, Type Checking and Type Conversion****
-
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                                # Type Error                                    ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Type Error
+# ==============================================================================
 
 # A type error occurs when you try to combine two different data types in a way that is not supported. For example, you cannot add a string and an integer together.
 
@@ -58,16 +63,16 @@ num_char = len(input("What is your name? "))
 
 # This will result in a type error, because you are trying to combine a string and an integer together. The len() function returns an integer, and the "+" operator is used to concatenate strings together. 
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                               # Type Checking                                  ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Type Checking
+# ==============================================================================
 
 # To check the data type of a variable, you can use the type() function.
 print(type(num_char))
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                              # Type Conversion                                 ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Type Conversion
+# ==============================================================================
 
 # In addition to type checking, you can also perform type conversion or "type casting". This is when you convert one data type to another. For example, you can convert an integer to a string, or a string to an integer.
 
@@ -92,8 +97,8 @@ print(70 + float("100.5"))
 print(str(70) + str(100))
 # This will simply concatenate the two strings together, resulting in "70100".
 
-#**Coding Exercise**
-#In this exercise, the goal is to write a program that takes a two-digit number input, and then adds the two digits together.
+# Coding Exercise ==============================================================
+# In this exercise, the goal is to write a program that takes a two-digit number input, and then adds the two digits together.
 
 two_digit_number = input("Type a two digit number: ")
 # print(type(two_digit_number))
@@ -102,9 +107,9 @@ second_digit = int(two_digit_number[1])
 two_digit_number = first_digit + second_digit
 print(two_digit_number)
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                     # Mathematical Operations in Python                        ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Mathematical Operations in Python
+# ==============================================================================
 
 print(3 + 5)  # Addition
 print(7 - 4)  # Subtraction
@@ -114,9 +119,9 @@ print(6 / 3)  # Division
 print(2 ** 2)  # Exponent (power of)
 print(3 % 2)  # Modulo (remainder of division)
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                            # Order of Operations                               ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Order of Operations
+# ==============================================================================
 
 # PEMDAS - Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
 # This is the order in which python will perform mathematical operations, which is the same as the order used in mathematics.
@@ -131,9 +136,9 @@ print(3 * 3 + 3 / 3 - 3)
 print(3 * (3 + 3) / 3 - 3)
 # This will give the result of 3. The reason for this is that the parentheses can be used to isolate parts of the code to give a low-priority operation a higher priority level. In this case, they are used to perform the addition of 3 + 3 first, then the multiplication of 3 * 6, then the division of 18 / 3, and finally the subtraction of 6 - 3.
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                       # Number Manipulation and F Strings                      ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Number Manipulation and F Strings
+# ==============================================================================
 
 print(8 / 3)
 
@@ -165,9 +170,9 @@ print(result)
 
 # If you want to continue calculations with the result, you can store it in a variable. Then you can use shorthand operators to perform mathematical operations on the variable, without needing to repeat the variable name.
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                        # Shorthand Operators for Numbers                       ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# Shorthand Operators for Numbers
+# ==============================================================================
 
 # There are shorthand operators for performing mathematical operations on numbers. These are useful for incrementing or decrementing numbers by a certain amount.
 
@@ -190,9 +195,9 @@ print(bottles_on_the_wall)
 
 # This will print 98, because the bottles_on_the_wall variable is decremented by 1.
 
-// ! ||--------------------------------------------------------------------------------||
-// ! ||                                   # f-strings                                  ||
-// ! ||--------------------------------------------------------------------------------||
+# ==============================================================================
+# f-strings
+# ==============================================================================
 
 # f-strings can be used to insert variables into strings. This is useful for displaying the value of a variable in a string.
 
@@ -202,9 +207,11 @@ isWinning = True
 
 print(f"Your score is {score}, your height is {height}, and you are winning is {isWinning}")
 
-# using f-strings, you can mix in different data types, such as integers, floats, and booleans, into a single string. This is useful for displaying info to the user, but also for the programmer because it allows you to quickly check the values of variables without having to print them out separately. This saves a lot of time, makes debugging code easier, and makes code easier to read.
+# using f-strings, you can mix in different data types, such as integers, floats, and booleans, into a single string. 
+# This is useful for displaying info to the user, but also for the programmer because it allows you to quickly check the values of variables without having to print them out separately. 
+# This saves a lot of time, makes debugging code easier, and makes code easier to read.
 
-# **Coding Exercise #1**
+# Coding Exercise #1 ===========================================================
 # The goal of this exercise is to calculate the estimated weeks you have left in your life, assuming you will live until age 90. Make use of different data types, as well as f-strings, in order to output the result.
 
 age = input("Enter your current age in years: ")
@@ -212,7 +219,7 @@ years = 90 - int(age)
 weeks = years * 52
 print (f"You have {weeks} weeks left to live, assuming you will live until age 90.")
 
-# **Coding Exercise #2**
+# Coding Exercise #2 ===========================================================
 # What is the data type of the variable a in the following code?
 
 int("5") 
@@ -224,7 +231,7 @@ a = int("5") / int(2.7)
 print(a)  
 # Outputs: 2.5
 
-# **Coding Exercise #3**
+# Coding Exercise #3 ===========================================================
 # Which of these lines of code will give an error?
 
 name = input("What is your name? ")
