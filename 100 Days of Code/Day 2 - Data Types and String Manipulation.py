@@ -1,6 +1,6 @@
 
 // ! ||--------------------------------------------------------------------------------||
-// ! ||                                  # Strings                                     ||
+// ! ||                                    # Strings                                   ||
 // ! ||--------------------------------------------------------------------------------||
 
 # Strings are just a sequence of characters. In python, they can be enclosed in single or double quotes. 
@@ -215,11 +215,14 @@ print (f"You have {weeks} weeks left to live, assuming you will live until age 9
 # **Coding Exercise #2**
 # What is the data type of the variable a in the following code?
 
-int("5") converts the string "5" to an integer 5
-int(2.7) converts the float 2.7 to an integer 2 by truncating the decimal part
-Then 5 is divided by 2, resulting in 2.5
+int("5") 
+# converts the string "5" to an integer 5
+int(2.7) 
+# converts the float 2.7 to an integer 2 by truncating the decimal part
+# Then 5 is divided by 2, resulting in 2.5
 a = int("5") / int(2.7)
-print(a)  # Outputs: 2.5
+print(a)  
+# Outputs: 2.5
 
 # **Coding Exercise #3**
 # Which of these lines of code will give an error?
