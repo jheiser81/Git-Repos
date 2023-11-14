@@ -1,4 +1,3 @@
-
 # ==============================================================================
 # Strings
 # ==============================================================================
@@ -11,7 +10,6 @@ print("Hello"[0])
 
 street_name = "Abbey Road"
 print(street_name[4] + street_name[7])
-
 
 print("123" + "456")
 # Note that the "numbers" inside the quotes are not treated as actual numbers, but as characters in a string. This is because the computer reads anything inside quotes as a string, and so the result will simply concatenate the two strings together.
