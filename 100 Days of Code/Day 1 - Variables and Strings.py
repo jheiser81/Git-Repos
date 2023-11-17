@@ -1,4 +1,6 @@
-# **String Manipulation**
+# ======================================================== 
+# ================== String Manipulation ================= 
+# ======================================================== 
 
 print("Hello, World!\nHello, World!\nHello, World!")
 print("Hello" + " " + "Joel")
@@ -19,19 +21,25 @@ print('e.g. print("Hello " + "world")')
 print("New lines can be created with a backslash and n.")
 # Extra bracket causing error
 
-# **Input Function**
+# ======================================================== 
+# ==================== Input Function ==================== 
+# ======================================================== 
 
 input("What is your name?")
 # the input() function will prompt the user for input and return the value as a string.
 
-# **Print Function**
+# ======================================================== 
+# ==================== Print Function ==================== 
+# ======================================================== 
 
 print("Hello, " + input("What is your name?"))
 # In this example, the input is passed as an argument to the print function, which is then concatenated with the string
 # "Hello " and printed to the console as a single string value "Hello, <name>".
 # This is an example of nested function calls, since we are calling the print function within the input function call.
 
-# **Len Function**
+# ======================================================== 
+# ===================== Len Function ===================== 
+# ======================================================== 
 
 # Write a program that prints the number of characters in a user's name
 
@@ -40,7 +48,9 @@ print(len(input("What is your name? ")))
 # The input function prompts the user for input and returns the value as a string.
 # The len function then returns the number of characters in the string and prints it to the console.
 
-# **Variables**
+# ======================================================== #
+# ======================= Variables ====================== #
+# ======================================================== #
 
 name = input("What is your name? ")
 print(name)
@@ -60,7 +70,9 @@ print(length)
 # In this example, the input value is assigned to a variable called 'name'. The len function is then called with the variable 'name' as an argument.
 # The result of the len function is assigned to a variable called 'length' and printed to the console.
 
-# **Int Function**
+# ======================================================== #
+# ===================== Int Function ===================== #
+# ======================================================== #
 
 # Write a program that takes two numbers as input and prints their product.
 num1 = int(input("Enter a number:"))
