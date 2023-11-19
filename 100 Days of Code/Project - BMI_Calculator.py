@@ -11,7 +11,7 @@ print(int(bmi))
 
 # An alternative way to solve this is:
 
-bmi = weight / (height * height)
-print(int(bmi))
+# bmi = weight / (height * height)
+# print(int(bmi))
 
 # This works because the calculation inside the brackets is evaluated first, and then the rest of the calculation is performed.
