@@ -21,6 +21,13 @@ if year % 4 == 0:
             print(f"{year} is not a Leap Year.")
     else: # This else statement needed to be indented one more level to be in line with the if statement above it. It was originally indented to be part of the first if statement.
         print(f"{year} is a Leap Year.")
+        
+# Write a program that takes two numbers as input and prints the larger number.
+
+# Write a program that takes an age as input and prints whether the person is an infant (age 0-1), a child (age 2-12), a teenager (age 13-19), an adult (age 20-64), or a senior (age 65+).
+# Write a program that takes a single letter as input and determines if it's a vowel or a consonant.
+# Write a program that takes a temperature as input and determines if water at that temperature would be solid (below 0 degrees Celsius), liquid (between 0 and 100 degrees Celsius), or gas (above 100 degrees Celsius).
+# Write a program that takes a score as input and determines the corresponding letter grade (A for 90-100, B for 80-89, C for 70-79, D for 60-69, F for below 60).
 
 # ==============================================================================
 # Advanced problems that require loops. Come back to these later
