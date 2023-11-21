@@ -11,13 +11,24 @@ year = int(input("Enter a year: "))
 if year % 4 == 0: # First condition to check if the year is cleanly divisible by 4. If it is, it is a Leap Year.
     if year % 100 == 0: # Second condition to check if the year is also divisible by 100 (year % 4 == 0 and year % 100 == 0). If it is, it is not a Leap Year.
         if year % 400 == 0: # Third condition to check if the year is also divisible by 400 (year % 4 == 0 and year % 100 == 0 and year % 400 == 0). If it is, it is a Leap Year.
-            print("Leap Year.") # If the year is divisible by 4, 100, and 400, it is a Leap Year.
-        else:
-            print("Not a Leap Year.") # If the year is divisible by 4 and 100, but not 400, not a Leap Year.
-    else:
-        print("Leap Year.") # If the year is divisible by 4, but not 100, it is a Leap Year.
+            print("Leap Year.") 
+        else: # If the year is divisible by 4 and 100, but not 400, it is not a Leap Year.
+            print("Not a Leap Year.") 
+    else: # If the year is divisible by 4, but not 100, it is a Leap Year.
+        print("Leap Year.") 
+else:  # If the year is not divisible by 4, it is not a Leap Year. 
+    print("Not a Leap Year.")
+    
+# Although this looks confusing, we are essentially using 3 nested if statements, which each have their own matching else statement. This is a good example of how to use nested if statements for checking multiple conditions.
+# The first if statement checks if the year is divisible by 4. If it is, it is a Leap Year. If it is not, it is not a Leap Year, which corresponds to the else statement for the first if statement code block.
+# The second if statement checks if the year is also divisible by 100. If it is, it is not a Leap Year. If it is not, it is a Leap Year, which corresponds to the else statement for the second if statement code block.
+# The third if statement checks if the year is also divisible by 400. If it is, it is a Leap Year. If it is not, it is not a Leap Year, which corresponds to the else statement for the third if statement code block.
+
+# A flow chart or a truth table would be a helpful way to visualize the logic of this program.
+
+
         
             
     
     
-        
+    
