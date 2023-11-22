@@ -100,9 +100,10 @@ elif height < 120 and age < 12:
 else:
     print("Sorry, you are too short to ride.")
 
-# ======================================================================= #
-# ============= Successive If Statements vs. Elif Statements ============ #
-# ======================================================================= #
+
+# ======================================================== #
+# =============== Successive If Statements =============== #
+# ======================================================== #
 
 # The difference between using successive if statements and elif statements is that successive if statements will check every condition, regardless of whether the previous condition was true or not. Elif statements will only check the next condition if the previous condition was false. This can be seen in the following example:
 
@@ -137,3 +138,15 @@ if height >= 120:
     # No need for else statement here, because the $3 is only added if user selects Y for the photo.
 else:
     print("Sorry, you are too short to ride.")
+    
+# ======================================================== #
+# =================== Logical Operators ================== #
+# ======================================================== #
+
+# Logical operators allow you to combine multiple condition checks into a single line of code. The three most common logical operators are "and", "or", and "not". These operators allow for more complex logic to be implemented in a program.
+
+# and: Both conditions must be true for the code to execute. If either condition is false, the code will not execute.
+# or: Only one condition needs to be true for the code to execute. If both conditions are false, the code will not execute.
+# not: This operator reverses the boolean value of a condition. If the condition is true, it will be false. If the condition is false, it will be true.
+
+
