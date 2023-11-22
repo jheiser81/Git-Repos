@@ -17,4 +17,5 @@ extra_cheese = input("Do you want to add extra cheese? Y/N: ").upper()
 bill = 0
 if size == "S":
     if add_pepperoni == "Y":
-        if extra_cheese == "Y"
+        if extra_cheese == "Y":
+            
