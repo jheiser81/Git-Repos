@@ -99,3 +99,41 @@ elif height < 120 and age < 12:
     print("You are not an adult, so must be accompanied by one. Your ticket will cost $5.")
 else:
     print("Sorry, you are too short to ride.")
+
+# ======================================================================= #
+# ============= Successive If Statements vs. Elif Statements ============ #
+# ======================================================================= #
+
+# The difference between using successive if statements and elif statements is that successive if statements will check every condition, regardless of whether the previous condition was true or not. Elif statements will only check the next condition if the previous condition was false. This can be seen in the following example:
+
+# if condition1 == true:
+#     print("Condition 1 is true.")
+# if condition2 == true:
+#     print("Condition 2 is true.")
+# if condition3 == true:
+#     print("Condition 3 is true.")
+# else:
+#     print("None of the conditions are true.")
+
+# In this example, the program will check if condition1 is true. If it is, it will print the first statement. It will then check if condition2 is true. If it is, it will print the second statement. It will then check if condition3 is true. If it is, it will print the third statement. If none of the conditions are true, it will print the else statement. This is because each if statement is independent of the others, and will execute regardless of the results of the other if statements.
+
+bill = 0
+if height >= 120:
+    print("You are allowed to ride the rollercoaster.")
+    age = int (input("What is your age? "))
+    if age < 12:
+        bill = 5
+        print("Child tickets are $5.")
+    elif age <= 18:
+        bill = 7
+        print("Youth tickets are $7.")
+    else:
+        bill = 12
+        print("Adult tickets are $12.")
+    wants_photo = input("Would you like a photo taken? Y or N: ").upper()
+    if wants_photo == "Y":
+        bill += 3 # Same as bill = bill + 3
+    print(f"Your final bill is ${bill}.")
+    # No need for else statement here, because the $3 is only added if user selects Y for the photo.
+else:
+    print("Sorry, you are too short to ride.")
