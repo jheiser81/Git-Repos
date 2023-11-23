@@ -22,7 +22,7 @@ love_count = combined_names.count("l") + combined_names.count("o") + combined_na
 # use the .count() function with the letters t, r, u, e and l,o,v,e as arguments to count the occurrences of each letter in the combined variable 
 love_score = str(true_count) + str(love_count) 
 # convert the int values to strings and concatenate them
-love_score = int(love_score) 
+love_score = int(love_score)    
 # convert the concatenated string back to an int to get a 2 digit number for the score
 
 if love_score < 10 or love_score > 90: 
