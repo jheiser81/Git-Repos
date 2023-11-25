@@ -21,8 +21,7 @@ random_float = random.random() * 5
 print(random_float)
 # This will return a random float between 0 and 1, and then multiply it by 5. 
 
-
-# random.choice(list) - returns a random item from the list specified, such as a random item from a list of colors: red, blue, green
+# **random.choice(list)** - returns a random item from the list specified, such as a random item from a list of colors: red, blue, green
 
 random_color = random.choice(["red", "blue", "green"])
 print(random_color)
@@ -30,7 +29,7 @@ print(random_color)
 # Step 2: Call the random.choice function, and pass in the list as a parameter
 # Step 3: Print the variable to the console
 
-# random.shuffle(list) - shuffles the list specified, such as shuffling a deck of cards
+# **random.shuffle(list)** - shuffles the list specified, such as shuffling a deck of cards
 
 # There are many other random functions. Documentatinon can be found at: https://askpython.com/python-modules/python-random-module-generate-random-numbers-sequences/
 
