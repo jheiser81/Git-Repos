@@ -55,7 +55,7 @@ def get_choices():
     player_choice = input("Choose rock, paper, or scissors: ").lower()
     options = ["rock", "paper", "scissors"]
     computer_choice = random.choice(options)
-    game_choices = {"player": player_choice, "computer": computer_choice}
+    game_choices = {"player": player_choice, "computer": computer_choice} 
     return game_choices
 
 # Place the logic for determining the winner in a function, so that I can just call the function and avoid repeating code
