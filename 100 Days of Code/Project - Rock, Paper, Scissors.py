@@ -7,16 +7,108 @@ def get_choices():
     game_choices = {"player": player_choice, "computer": computer_choice}
     return game_choices
 
-game_result = get_choices()
-# Need to implement logic to determine the winner, and print the results.
-print(game_result)
+player_wins = 0
+computer_wins = 0
+rounds = 0
 
-# Step 1: Include the random module
-# Step 2: Create a function to hold the logic of the game. 
-# Step 3: Create a variable to store the user's choice, and then prompt the user to enter their choice in the console.
-# Step 4: Create a list of options for rock, paper, and scissors. A list is a collection of items stored in a variable, and is defined by using square brackets, and separating the items with commas. Referred to as arrays in other languages.
-# Step 5: Create a variable to store the computer's choice, and then use the random.choice function to randomly select an option from the previously created list.
-# Step 6: Create a dictionary to store the player and computer choices. A dictionary is a collection of key value pairs stored in a variable. In this case, the keys are "player" and "computer", and the values are the choices made by the player and computer. It is defined by using curly braces, and separating the key value pairs with a colon. The key value pairs are separated by commas.
-# Step 7: Return the game_choices dictionary. This will close the function, as well as return the game_choices dictionary to the function call. 
-# Step 8: Create a variable called game_result, and pass in the get_choices function. This will call the get_choices function, and store the response in the game_result variable.
-# Step 9: Print the game_result variable to the console. This will print the game_choices dictionary to the console.
+while rounds < 3:
+    rounds += 1     
+    round_result = get_choices()
+    if round_result["player"] == "rock" and round_result["computer"] == "scissors" or round_result["player"] == "paper" and round_result["computer"] == "rock" or round_result["player"] == "scissors" and round_result["computer"] == "paper":
+        player_wins += 1
+        print(f"Round Result: {round_result}\n Player wins this round.")
+    elif round_result["player"] == "rock" and round_result["computer"] == "paper" or round_result["player"] == "paper" and round_result["computer"] == "scissors" or round_result["player"] == "scissors" and round_result["computer"] == "rock":
+        computer_wins += 1
+        print(f"Round result: {round_result}\n Computer wins this round.")
+    else:
+        print(f"Round Result: {round_result}\n Round is a draw.")
+        
+# If it's a tie after 3 rounds, play a tiebreaker round.
+if player_wins == computer_wins:
+    print("The game is a tie after 3 rounds. Playing a tiebreaker round.")
+    game_result = get_choices()
+    if game_result["player"] == "rock" and game_result["computer"] == "scissors" or game_result["player"] == "paper" and game_result["computer"] == "rock" or game_result["player"] == "scissors" and game_result["computer"] == "paper":
+        player_wins += 1
+        print(f"Round Result: {game_result}\n Player wins this round.")
+    elif game_result["player"] == "rock" and game_result["computer"] == "paper" or game_result["player"] == "paper" and game_result["computer"] == "scissors" or game_result["player"] == "scissors" and game_result["computer"] == "rock":
+        computer_wins += 1
+        print(f"Round result: {game_result}\n Computer wins this round.")
+
+if player_wins > computer_wins:
+    print(f"Final score: Player: {player_wins} Computer: {computer_wins}")
+    print("Player wins the game!")
+elif computer_wins > player_wins:
+    print(f"Final score: Player: {player_wins} Computer: {computer_wins}")
+    print("The computer won the game.")
+else:
+    print(f"Final score: Player: {player_wins} / Computer: {computer_wins}")
+    print("The game was a draw.")
+    
+# This code works, but remember DRY: Don't Repeat Yourself.
+# I should refactor this code to make it more efficient by eliminating repetition.
+
+# Refactored code:
+
+import random 
+
+def get_choices():
+    player_choice = input("Choose rock, paper, or scissors: ")
+    options = ["rock", "paper", "scissors"]
+    computer_choice = random.choice(options)
+    game_choices = {"player": player_choice, "computer": computer_choice}
+    return game_choices
+
+# Place the logic for determining the winner in a function, so that I can just call the function and avoid repeating code
+def win_check(game_result):
+    if game_result["player"] == "rock" and game_result["computer"] == "scissors" or game_result["player"] == "paper" and game_result["computer"] == "rock" or game_result["player"] == "scissors" and game_result["computer"] == "paper":
+        return "player" # This will return the value of "player" to the variable winner, which is then used in the if/elif/else statements below 
+    elif game_result["player"] == "rock" and game_result["computer"] == "paper" or game_result["player"] == "paper" and game_result["computer"] == "scissors" or game_result["player"] == "scissors" and game_result["computer"] == "rock":
+        return "computer" # This will return the value of "computer" to the variable winner
+    else:
+        return "draw" 
+
+# Create counter variables for player wins, computer wins, and rounds played  
+player_wins = 0
+computer_wins = 0
+rounds = 0
+
+# Create a while loop that will run for 3 rounds, and increment the rounds variable by 1 each time the loop runs
+# If the player wins, increment the player_wins variable by 1, if the computer wins, increment the computer_wins variable by 1. Else, round is a draw.
+while rounds < 3:
+    rounds += 1
+    round_result = get_choices() # Call the get_choices function and store the result in the variable round_result
+    winner = win_check(round_result) # Call the win_check function and store the result in the variable winner
+    if winner == "player":
+        player_wins += 1 # Increment the player_wins variable by 1 if the player wins
+        print(f"Round Result: {round_result}\nPlayer wins this round.\n")
+    elif winner == "computer":
+        computer_wins += 1 # Increment the computer_wins variable by 1 if the computer wins
+        print(f"Round result: {round_result}\nComputer wins this round.\n")
+    else: # If the round is a draw, print the round result and a message saying the round is a draw
+        print(f"Round Result: {round_result}\nRound is a draw.\n")
+        
+# While loop to play a tiebreaker round if the game is a tie after 3 rounds. 
+# This will run until the player or computer wins the tiebreaker round.
+while player_wins == computer_wins:
+    print("The game is a tie after 3 rounds. Playing a tiebreaker round.\n")
+    tiebreaker = get_choices() # Call the get_choices function and store the result in the variable tiebreaker
+    winner = win_check(tiebreaker) # Call the win_check function and store the result in the variable winner
+    if winner == "player":
+        player_wins += 1 # Increment the player_wins variable by 1 if the player wins
+        print(f"Round Result: {tiebreaker}\nPlayer wins this round.\n")
+    elif winner == "computer":
+        computer_wins += 1 # Increment the computer_wins variable by 1 if the computer wins
+        print(f"Round result: {tiebreaker}\nComputer wins this round.\n")
+        
+if player_wins > computer_wins:
+    print(f"Final score: Player: {player_wins} Computer: {computer_wins}")
+    print("Player wins the game!")
+elif computer_wins > player_wins:
+    print(f"Final score: Player: {player_wins} / Computer: {computer_wins}")
+    print("The computer won the game.\n")
+    
+
+
+
+
+
