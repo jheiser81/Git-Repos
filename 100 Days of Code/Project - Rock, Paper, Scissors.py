@@ -59,7 +59,7 @@ def get_choices():
     return game_choices
 
 # Place the logic for determining the winner in a function, so that I can just call the function and avoid repeating code
-def round_winner_check(round_choice):
+def round_winner_check(round_choice): # round_choice is the parameter that will be passed to the function
     if round_choice["player"] == "rock" and round_choice["computer"] == "scissors" or round_choice["player"] == "paper" and round_choice["computer"] == "rock" or round_choice["player"] == "scissors" and round_choice["computer"] == "paper":
         return "player" # This will return the value of "player" to the variable winner, which is then used in the if/elif/else statements below 
     elif round_choice["player"] == "rock" and round_choice["computer"] == "paper" or round_choice["player"] == "paper" and round_choice["computer"] == "scissors" or round_choice["player"] == "scissors" and round_choice["computer"] == "rock":
