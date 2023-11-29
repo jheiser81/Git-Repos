@@ -68,13 +68,17 @@ num_list = [4, 5, 6] # This changes the values in the list from 1, 2, 3 to 4, 5,
 
 num_list[0] = 1 # This will change the first item in the list from 4 to 1
 
-# Lists can be expanded by using the appendI() function, which adds an item to the end of the list.
+# You can also add items to a list using the append() function, which adds the item to the end of the list. This does no affect the other items in the list.
 
-num_list.append(7) # This will add the number 7 to the end of the list
+num_list.append(7) # this will add the number 7 to the end of the list
 
 # Values can also be removed from a list using the remove() function, which removes the first instance of the value specified.
 
 num_list.remove(7) # This will remove the number 7 from the list
+
+# Another way to add an item to the end of a list is to use the += operator, which adds the item to the end of the list. This does not affect the other items in the list.
+
+num_list += [8] # This will add the number 8 to the end of the list
 
 # To add an item to a specific position in the list, use the insert() function, which takes two parameters: the index position, and the value to be inserted.
 
