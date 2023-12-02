@@ -1,0 +1,16 @@
+Pomodoro Timer
+-Tracks each "Pomodoro" block, which is 25 mins of focused work and a 5 min break
+-Needs to be a visual display of completed pomodoros, as well as a numerical tally
+-Plays timer sound on completion of each pomodoro, and timer for when each break ends
+-Prompts user to start break after each block of work, or to continue working
+-Prompts user to start new pomodoro block after each break 
+
+Optional: 
+-Alternative "focus" mode which is 50 min blocks of work, with a 10 min break
+-Daily, weekly, and monthly tallies of completed pomodoros
+
+Random Steam Game Selector
+-Selects random game from user's Steam Library to open
+-Needs to be able to check that user has Steam installed. Check that randomly selected game is installed. If it is, open it. If not, asks user if they want to install it.
+-Will need to plug into the Steam API. Need to research how to do this and now to implement it
+-Language? Simple console app would be easier, but html/css/JS would make it web-viable
