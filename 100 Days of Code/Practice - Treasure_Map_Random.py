@@ -112,9 +112,7 @@ if dig_count == 5: # If the user has used up all 5 attempts, the game will end. 
     else:
         print("Thanks for playing!") # If the user does not want to play again, the program will end
         
-# use functions to print map, DRY
-# use while loop to repeat game?
-# implement logic for when user enters invalid input, or enters the same location twice
+
 
 
 
