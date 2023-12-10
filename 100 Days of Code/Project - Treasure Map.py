@@ -37,10 +37,10 @@ position = input("Where do you want to put the treasure? ")
 # Don't change the code above 👆
 # Write your code below:
 letter = position[0].upper() # extracts the first character of 'position' and converts it to uppercase.
-abc = ["A", "B", "C"] # list of letters
+abc = ["A", "B", "C"] # list of letters that can represent the column.
 letter_index = abc.index(letter) # calls the index() method on the 'abc' list and passes in the 'letter' variable. The index() method returns the index of the first element with the specified value.
 number_index = int(position[1]) - 1 # sets 'number_index' to the second character of 'position' and subtracts 1 from it. This is because list indexes start at 0.
-map[number_index][letter_index] = "X" # sets both number_index and letter_index to "X" in the 'map' list.
+map[number_index][letter_index] = "X" # sets both number_index and letter_index to "X" in the 'map' list to represent the treasure.
 # Write your code above 👆
 # Don't change the code below 👇
 print(f"{line1}\n{line2}\n{line3}") # prints the 'map' list with the modified indexes.
