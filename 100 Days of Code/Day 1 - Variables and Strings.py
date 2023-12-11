@@ -5,7 +5,7 @@
 print("Hello, World!\nHello, World!\nHello, World!")
 print("Hello" + " " + "Joel")
 
-# Fix the code below 👇
+# Fix the code below:
 # print(Day 1 - String Manipulation")
 # print("String Concatenation is done with the "+" sign.")
 #   print('e.g. print("Hello " + "world")')
