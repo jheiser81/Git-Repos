@@ -8,13 +8,15 @@
 # -use of functions, conditionals, loops, variables, and other concepts learned so far
 
 import random
-import time # this module is used to add a delay between print statements. It can be used to simulate a computer thinking or calculating.
+import time 
+'''the time() module is used to add a delay between code executions. 
+The module takes a float or integer value as an argument, which represents the number of seconds to delay. It can be used to simulate a computer thinking or calculating'''
 
 # Global variables for player and computer markers
 player_mark = ""
 computer_mark = ""
 
-# Setting up the game board grid
+# Sets up the game board
 # Will also handle clearing/resetting the board
 def create_board():
     global row1, row2, row3, game_board
