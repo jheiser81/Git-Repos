@@ -12,28 +12,30 @@ import time
 '''the time() module is used to add a delay between code executions. 
 The module takes a float or integer value as an argument, which represents the number of seconds to delay. It can be used to simulate a computer thinking or calculating'''
 
-# Global variables for player and computer markers
+'''Initialize the player and computer markers as global variables so they can be accessed anywhere in the code.
+The markers will be assigned a value later in the code, this is just to initialize them as empty strings.'''
 player_mark = ""
 computer_mark = ""
 
-# Sets up the game board
-# Will also handle clearing/resetting the board
+'''Sets up the game board, which is a 3x3 grid
+The board is comprised of 3 rows and 3 columns. Each row is a list, and the board is a list of lists, also referred to as a matrix or multi-dimensional list.
+The board is initialized with "-" to represent cells that are empty and have not been marked by either player.
+Will also handle clearing/resetting the board by setting all cells back to "-".'''
 def create_board():
-    global row1, row2, row3, game_board
+    global row1, row2, row3, game_board # set to global so these variables can be used outside the function
     row1 = ["-", "-", "-"]
     row2 = ["-", "-", "-"]
     row3 = ["-", "-", "-"]
     game_board = [row1, row2, row3]
 
-# Print the game board
+'''Print the game board
+The main purpose of this function is to print the board after each player's turn, so that the user can see the progress of the game'''
 def print_board():
     print(f"{row1}\n{row2}\n{row3}\n")
 
-# Determine if the user or the computer goes first
+'''Determine if the user or the computer goes first using the random.choice() function.
+The function is taking a list of boolean values as an argument, and randomly selecting one of the values from the list. Based on the result, one of two messages will be printed.'''
 def turn_order():
-    global player_mark, computer_mark # set to global so they can be used outside the function
-    player_mark = "X"
-    computer_mark = "O"
     is_player_turn = random.choice([True, False]) # randomly selected from list of boolean values
     
     if is_player_turn:
@@ -68,7 +70,21 @@ def turn_order():
         computer_turn()
     return player, computer'''
 
-# Function for the player's turn
+'''Function for the player's turn
+-The player is prompted to enter a position on the game board to place their marker in the row, column format.
+
+-A While True loop is used to ensure the player makes a valid move. The loop will continue until the player chooses makes a valid cell, which is a position on the board that is not already marked.
+
+-The Try block is used to attempt to convert the player's input to integers. If the input is not valid, the except block will execute and the player will be prompted to enter a valid move.
+
+-The row and column variables are initialized as integers, and the player's input is converted to integers using the int() function. The int(position[0] gets the first character from the user's input, which is the row number. The int(position[-1]) gets the last character from the user's input, which is the column number. 1 is subtracted from each of these values to get the correct index.
+
+-If the player enters a position that is already taken (if the cell position is NOT = '-'), the if statement will execute and the player will be prompted to enter a valid move. Otherwise, the break statement will execute and the loop will end. The break is necessary to prevent the loop from continuing if the player enters a valid move.
+
+-The except block will catch any errors that occur when the player enters their move. If the player enters an invalid move, the except block will execute and the player will be prompted to enter a valid move.
+
+-Once a valid move is made, the game_board variable takes the row and column variables (the user's input converted to integers) as arguments, and uses them to access the correct cell on the board. The player's marker is then placed in the cell, and the print_board() function is called to display the updated board.
+'''
 def player_turn():
     print("Choose a position on the game board to place your marker in the format 'row, column'.")
     print("For example, if you want to place your marker in the top left corner, type '1, 1' to represent the first row and first column.\n")
@@ -151,11 +167,16 @@ def draw_check():
 
 # Main game loop
 def game_loop():
+    global player_mark, computer_mark
+    
+    # Assign player and computer markers
+    player_mark = "X"
+    computer_mark = "O"
+    
     print("Rolling to see who goes first...\n")
     time.sleep(2) # 2 second delay
     is_player_turn = turn_order()
     print(f"Player is {player_mark} and computer is {computer_mark}.\n")
-    
     
     while True:
         # If player goes first
