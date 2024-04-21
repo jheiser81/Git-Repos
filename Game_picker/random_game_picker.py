@@ -46,7 +46,7 @@ class GamePickerApp:
         else:
             return False
         
-    # Create a function to hide the widgets and display the game type selection widgets
+    # Hide the widgets and display the game type selection widgets
     def show_game_type_selection(self):
         # Hide widgets
         self.welcome_message.pack_forget()
@@ -62,10 +62,9 @@ class GamePickerApp:
         self.unplayed_games_radio.pack()
         self.submit_button_2.pack()
         
-    # Function to create the GUI for the game picker application           
+    # Create the GUI for the game picker application           
     def create_gui(self):
-
-        # Create the main window
+        # Initialize the main window
         self.window = tk.Tk()
         self.window.title("Random Game Picker")
         
@@ -73,19 +72,17 @@ class GamePickerApp:
         self.welcome_message = tk.Label(self.window, text="Welcome to the Random Game Picker!\n\nEnter your Steam ID and API key to get started.\n\nTo find your Steam ID, open the Steam client, click on your profile name, and then click on Account Details.\nYour Steam ID will be displayed under your profile name. Copy and paste it into the box below.\n\nTo get your Steam API key, visit https://steamcommunity.com/dev/apikey and follow the instructions to generate a new API key.\nUnder 'Domain Name', enter 'localhost' and click 'Create'. Copy the API key and paste it into the text box below.")
         self.welcome_message.pack()
         
-        # Create labels and entry fields for the Steam ID and API key
+        # Labels and entry fields for the Steam ID and API key
         self.steam_id_label = tk.Label(self.window, text="Steam ID:")
-        self.steam_id_entry = tk.Entry(self.window)
-        self.api_key_label = tk.Label(self.window, text="API Key:")
-        self.api_key_entry = tk.Entry(self.window)
-    
-        # Pack the labels and entry fields
         self.steam_id_label.pack()
+        self.steam_id_entry = tk.Entry(self.window)
         self.steam_id_entry.pack()
+        self.api_key_label = tk.Label(self.window, text="API Key:")
         self.api_key_label.pack()
+        self.api_key_entry = tk.Entry(self.window)
         self.api_key_entry.pack()
-        
-        # Create a submit button to fetch the Steam ID and API key from the entry fields
+   
+        # Submit button to fetch the Steam ID and API key from the entry fields
         self.submit_button_1 = tk.Button(self.window, text="Submit", command=self.show_game_type_selection, bg='blue', fg='white', font=('helvetica', 12, 'bold'))
         self.submit_button_1.pack(pady=10)
     
@@ -95,11 +92,12 @@ class GamePickerApp:
         self.all_games_radio = tk.Radiobutton(self.window, text='ALL games', variable=game_type_var, value='all')
         self.unplayed_games_radio = tk.Radiobutton(self.window, text='UNPLAYED games', variable=game_type_var, value='unplayed')
         
-        # Create a submit button that fetches the game type and calls the on_submit function
+        # Submit button for game type selection. Triggers the game type selection process
         self.submit_button_2 = tk.Button(self.window, text="Submit", command=lambda: self.on_submit(game_type_var.get()), bg='blue', fg='white', font=('helvetica', 12, 'bold'))
         
         self.window.mainloop()
     
+    # Helper method to handle the submit button click event
     def on_submit(self, game_type):
         # Trim leading/trailing whitespace
         self.steam_id = self.steam_id_entry.get().strip()
@@ -119,14 +117,15 @@ class GamePickerApp:
         
         # Run the game fetching process in a separate thread to prevent freezing the GUI
         threading.Thread(target=self.fetch_games, args=(game_type,)).start()
-        
+    
+    # Fetch the list of games based on the selected game type    
     def fetch_games(self, game_type):
-        # Get a list of games based on the selected game type, key, and steam_id
         if game_type == 'all':
             games = self.get_all_games()
         else:
             games = self.get_unplayed_games()
         
+        # Loop through games list and suggest a random game until user cancels
         while True:
             try:
                 # Suggest a random game from the list of games
@@ -152,6 +151,6 @@ class GamePickerApp:
                 messagebox.showerror("Error", "An unexpected error occurred. Please try again.")
                 break
 
-# Create an instance of the GamePickerApp class and start the GUI
+# Create instance of the GamePickerApp class and start the GUI
 app = GamePickerApp() 
 app.create_gui()
