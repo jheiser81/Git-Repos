@@ -141,7 +141,7 @@ def on_submit(game_type, key, steam_id):
                 break
                       
 # Get the path to the Steam API key file                 
-key_path = "C:\\Users\\Administrator\\Desktop\\GitHub Repos\\Game_picker\\Steam_API_Key.txt"
+key_path = "C:\\Users\\Administrator\\Desktop\\GitHub Repos\\Python-Projects\\Game_picker\\Steam_API_Key.txt"
 steam_id = 76561198042102876
 key = get_api_key(key_path)
 
