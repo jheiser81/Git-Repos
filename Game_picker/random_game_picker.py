@@ -58,6 +58,7 @@ class GamePickerApp:
         self.api_key_label.pack_forget()
         self.api_key_entry.pack_forget()
         self.submit_button_1.pack_forget()
+        self.clear_button.pack_forget()
             
         # Display game type selection widgets
         self.instructions_message.pack()
@@ -93,8 +94,10 @@ class GamePickerApp:
         self.api_key_entry.pack()
         
         # Insert the saved SteamID and API key into the entry fields
-        self.steam_id_entry.insert(0, self.steam_id)
-        self.api_key_entry.insert(0, self.api_key)
+        if self.steam_id is not None:
+            self.steam_id_entry.insert(0, self.steam_id)
+        if self.api_key is not None:
+            self.api_key_entry.insert(0, self.api_key)
    
         # Submit button to fetch the SteamID and API key from the entry fields
         self.submit_button_1 = tk.Button(self.window, text="Submit", command=self.show_game_type_selection, bg='blue', fg='white', font=('helvetica', 12, 'bold'))
@@ -102,6 +105,7 @@ class GamePickerApp:
         
         # Button to clear the entered/saved SteamID and API key
         self.clear_button = tk.Button(self.window, text = "Clear", command=self.clear_form, bg='red', fg='white', font=('helvetica', 12, 'bold'))
+        self.clear_button.pack(pady=10)
     
         # Create the game type selection widgets, but hide them initially
         self.instructions_message = tk.Label(self.window, text="Select from ALL your games or only UNPLAYED games, then click Submit to get a random game suggestion.")
