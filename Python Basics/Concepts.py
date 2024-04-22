@@ -105,9 +105,15 @@ In addition to using modules created by others, you can also create your own cus
 
 '''*** Using a Custom Module ***
 You can use a custom module by importing it into your code using the import keyword. When you import a module, you can access the functions and variables defined in the module using dot notation. Using modules allows you to organize your code into separate files, and then import the code you need into your main program.'''
+
 import Circle
 result = Circle.area(5)
 print(result)
+
+'''Creating Module Packages
+You can organize multiple modules into a package by placing the modules into a folder. Then, you can import the package using the import keyword, followed by the name of the folder containing the modules. When you import a package, you can access the modules in the package using dot notation.
+'''
+
 
 
 
