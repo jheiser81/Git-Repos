@@ -14,7 +14,7 @@ class GamePickerApp:
         self.config_file = 'config.json'
         
     # Get a list of all games owned by the user with the given Steam ID
-    def get_all_games(self):
+    def get_all_games(self) -> list[dict]:
         try:
             url = f"http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={self.api_key}&steamid={self.steam_id}&include_appinfo=true&format=json"
             response = requests.get(url)
@@ -26,7 +26,7 @@ class GamePickerApp:
             return []
 
     # Get a list of unplayed games owned by the user with the given Steam ID
-    def get_unplayed_games(self):
+    def get_unplayed_games(self) -> list[dict]:
         all_games = self.get_all_games()
         return [game for game in all_games if game['playtime_forever'] == 0]
 
@@ -36,21 +36,21 @@ class GamePickerApp:
         return game
 
     # Validate the Steam Id
-    def validate_steam_id(self, steam_id):
+    def validate_steam_id(self, steam_id: str) -> bool:
         if steam_id.isdigit() and len(steam_id) == 17:
             return True
         else:
             return False
     
     # Validate the Steam API key
-    def validate_api_key(self, api_key):
+    def validate_api_key(self, api_key: str) -> bool:
         if api_key.isalnum() and len(api_key) == 32:
             return True
         else:
             return False
         
     # Hide the widgets and display the game type selection widgets
-    def show_game_type_selection(self):
+    def show_game_type_selection(self) -> None:
         # Hide widgets
         self.welcome_message.pack_forget()
         self.steam_id_label.pack_forget()
@@ -128,7 +128,7 @@ class GamePickerApp:
         self.api_key = None
     
     # Helper method to handle the submit button click event
-    def on_submit(self, game_type):
+    def on_submit(self, game_type: str) -> None:
         # Trim leading/trailing whitespace
         self.steam_id = self.steam_id_entry.get().strip()
         self.api_key = self.api_key_entry.get().strip()
@@ -157,7 +157,7 @@ class GamePickerApp:
         threading.Thread(target=self.fetch_games, args=(game_type,)).start()
     
     # Fetch the list of games based on the selected game type    
-    def fetch_games(self, game_type):
+    def fetch_games(self, game_type: str) -> None:
         if game_type == 'all':
             games = self.get_all_games()
         else:
