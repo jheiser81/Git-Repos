@@ -4,11 +4,14 @@ import requests
 import random
 import webbrowser
 import threading
+import os
+import json
 
 class GamePickerApp:
     def __init__(self):
         self.api_key = None
         self.steam_id = None
+        self.config_file = 'config.json'
         
     # Get a list of all games owned by the user with the given Steam ID
     def get_all_games(self):
@@ -72,6 +75,13 @@ class GamePickerApp:
         self.welcome_message = tk.Label(self.window, text="Welcome to the Random Game Picker!\n\nEnter your Steam ID and API key to get started.\n\nTo find your Steam ID, open the Steam client, click on your profile name, and then click on Account Details.\nYour Steam ID will be displayed under your profile name. Copy and paste it into the box below.\n\nTo get your Steam API key, visit https://steamcommunity.com/dev/apikey and follow the instructions to generate a new API key.\nUnder 'Domain Name', enter 'localhost' and click 'Create'. Copy the API key and paste it into the text box below.")
         self.welcome_message.pack()
         
+        # Load the SteamID and API key from a config file, if one exists
+        if os.path.exists(self.config_file):
+            with open(self.config_file, 'r') as f:
+                config = json.load(f)
+                self.steam_id = config.get('steam_id')
+                self.api_key = config.get('api_key')
+        
         # Labels and entry fields for the Steam ID and API key
         self.steam_id_label = tk.Label(self.window, text="Steam ID:")
         self.steam_id_label.pack()
@@ -81,10 +91,17 @@ class GamePickerApp:
         self.api_key_label.pack()
         self.api_key_entry = tk.Entry(self.window)
         self.api_key_entry.pack()
+        
+        # Insert the saved SteamID and API key into the entry fields
+        self.steam_id_entry.insert(0, self.steam_id)
+        self.api_key_entry.insert(0, self.api_key)
    
-        # Submit button to fetch the Steam ID and API key from the entry fields
+        # Submit button to fetch the SteamID and API key from the entry fields
         self.submit_button_1 = tk.Button(self.window, text="Submit", command=self.show_game_type_selection, bg='blue', fg='white', font=('helvetica', 12, 'bold'))
         self.submit_button_1.pack(pady=10)
+        
+        # Button to clear the entered/saved SteamID and API key
+        self.clear_button = tk.Button(self.window, text = "Clear", command=self.clear_form, bg='red', fg='white', font=('helvetica', 12, 'bold'))
     
         # Create the game type selection widgets, but hide them initially
         self.instructions_message = tk.Label(self.window, text="Select from ALL your games or only UNPLAYED games, then click Submit to get a random game suggestion.")
@@ -96,6 +113,15 @@ class GamePickerApp:
         self.submit_button_2 = tk.Button(self.window, text="Submit", command=lambda: self.on_submit(game_type_var.get()), bg='blue', fg='white', font=('helvetica', 12, 'bold'))
         
         self.window.mainloop()
+        
+    # Clear the Steam ID and API key entry fields
+    def clear_form(self):
+        self.steam_id_entry.delete(0, 'end')
+        self.api_key_entry.delete(0, 'end')
+        if os.path.exists(self.config_file):
+            os.remove(self.config_file)
+        self.steam_id = None
+        self.api_key = None
     
     # Helper method to handle the submit button click event
     def on_submit(self, game_type):
@@ -109,6 +135,14 @@ class GamePickerApp:
             return
         if not self.validate_api_key(self.api_key):
             tk.messagebox.showerror("Error", "Invalid API Key. Please enter a valid API Key.")
+            return
+        
+        # Save the SteamID and API key to a file for future use
+        try:
+            with open(self.config_file, 'w') as f:
+                json.dump({'steam_id': self.steam_id, 'api_key': self.api_key}, f)
+        except Exception as e:
+            tk.messagebox.showerror("Error", "An error occurred while saving the Steam ID and API key. Please try again.")
             return
         
         # Display a loading message while fetching the game list
