@@ -6,7 +6,6 @@ import webbrowser
 import threading
 import os
 import json
-from bs4 import BeautifulSoup
 
 class GamePickerApp:
     def __init__(self):
@@ -30,20 +29,7 @@ class GamePickerApp:
     def get_unplayed_games(self):
         all_games = self.get_all_games()
         return [game for game in all_games if game['playtime_forever'] == 0]
-    
-    # Get a list of the user's game collections
-    def get_favorite_games(self):
-        try:
-            url = f"https://steamcommunity.com/profiles/{self.steam_id}/favorites/"
-            response = requests.get(url)
-            response.raise_for_status() # Raise an exception for invalid response
-            soup = BeautifulSoup(response.text, 'html.parser')
-            favorite_games = soup.find_all('div', class_='gameListRow')
-            return [{'name': game.find('div', class_='gameListRowItemName').text, 'appid': game['id'].split('_')[1]} for game in favorite_games]
-        except requests.exceptions.RequestException as e:
-            tk.messagebox.showerror("Error", "An error occurred while fetching the list of favorite games. Please check your Steam ID and try again.")
-            return []
-           
+
     # Suggest a random game from the list of unplayed games
     def suggest_game(self, games):
         game = random.choice(games)
@@ -78,7 +64,6 @@ class GamePickerApp:
         self.instructions_message.pack()
         self.all_games_radio.pack()
         self.unplayed_games_radio.pack()
-        self.favorites_radio.pack()
         self.submit_button_2.pack()
         
     # Create the GUI for the game picker application           
@@ -127,7 +112,6 @@ class GamePickerApp:
         game_type_var = tk.StringVar(value='unplayed')
         self.all_games_radio = tk.Radiobutton(self.window, text='ALL games', variable=game_type_var, value='all')
         self.unplayed_games_radio = tk.Radiobutton(self.window, text='UNPLAYED games', variable=game_type_var, value='unplayed')
-        self.favorites_radio = tk.Radiobutton(self.window, text='FAVORITE games', variable=game_type_var, value='favorites')
         
         # Submit button for game type selection. Triggers the game type selection process
         self.submit_button_2 = tk.Button(self.window, text="Submit", command=lambda: self.on_submit(game_type_var.get()), bg='blue', fg='white', font=('helvetica', 12, 'bold'))
@@ -176,14 +160,8 @@ class GamePickerApp:
     def fetch_games(self, game_type):
         if game_type == 'all':
             games = self.get_all_games()
-        elif game_type == 'favorites':
-            games = self.get_favorite_games()
-        elif game_type == 'unplayed':
+        else:
             games = self.get_unplayed_games()
-            
-        if not games:
-            tk.messagebox.showerror("Error", "No games found for the seclected game type. Please try again.")
-            return
         
         # Loop through games list and suggest a random game until user cancels
         while True:
