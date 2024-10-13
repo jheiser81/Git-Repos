@@ -1,4 +1,4 @@
-('C:\\GitHub_Repos\\Python-Intro\\Python-Stuff\\build\\TTS_Reader\\PYZ-00.pyz',
+('C:\\GitHub_Repos\\Python-Intro\\Python-Stuff\\TTS_Reader\\build\\TTS_Reader\\PYZ-00.pyz',
  [('PyPDF2',
    'C:\\Users\\jheis\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyPDF2\\__init__.py',
    'PYMODULE'),
